@@ -10,4 +10,10 @@ class MyStackTest {
     MyStack myStack = new MyStack();
     assertTrue(myStack.isEmpty());
   }
+
+  @Test
+  void test_push() {
+    MyStack myStack = new MyStack();
+    myStack.push(0);
+  }
 }

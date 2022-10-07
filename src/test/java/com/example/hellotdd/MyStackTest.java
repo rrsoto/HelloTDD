@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 import com.example.hellotdd.MyStack.StackUnderflowException;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -57,5 +58,12 @@ class MyStackTest {
     myStack.push(element);
     int actualPoppedElement = myStack.pop();
     assertThat(actualPoppedElement).isEqualTo(element);
+  }
+  @Test
+  void after_push_x_and_y_will_pop_y_and_x() {
+    myStack.push(99);
+    myStack.push(88);
+    assertThat(myStack.pop()).isEqualTo(88);
+    assertThat(myStack.pop()).isEqualTo(99);
   }
 }

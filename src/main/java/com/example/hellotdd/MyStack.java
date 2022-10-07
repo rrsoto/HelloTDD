@@ -1,22 +1,22 @@
 package com.example.hellotdd;
 
 public class MyStack {
-  private boolean empty = true;
+  private int size = 0;
 
   public boolean isEmpty() {
-    return empty;
+    return 0 == size;
   }
 
   public void push(int element) {
-    empty = false;
+    size++;
   }
 
   public int pop() {
-    empty = true;
+    size--;
     return -1;
   }
 
   public int size() {
-    return 2;
+    return size;
   }
 }

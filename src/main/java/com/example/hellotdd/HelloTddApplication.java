@@ -1,4 +1,4 @@
-package com.example.HelloTDD;
+package com.example.hellotdd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,11 +1,9 @@
 package com.example.hellotdd;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MyStackTest {
 
@@ -18,13 +16,13 @@ class MyStackTest {
 
   @Test
   void after_create_stack_is_empty() {
-    assertTrue(myStack.isEmpty());
+    assertThat(myStack.isEmpty()).isTrue();
   }
 
   @Test
   void after_push_stack_is_not_empty() {
     myStack.push(0);
-    assertFalse(myStack.isEmpty());
+    assertThat(myStack.isEmpty()).isFalse();
   }
 
   @Test

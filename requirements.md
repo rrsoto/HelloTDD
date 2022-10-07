@@ -1,6 +1,10 @@
 ## Ejemplo 1: Creación de una pila (FIFO)
 
+Creación de una estructura de datos tipo Pila para elementos enteros
+
 ### Requerimientos:
 
-* Creación de una estructura de datos tipo Pila (FIFO)
-* Necesitaremos insertar un elemento, extraer un elemento y validar que la pila esta vacía.
+* Insertar un elemento
+* Extraer un elemento
+* Validar que la pila esta vacía
+* Obtener el tamaño de la pila

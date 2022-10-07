@@ -26,13 +26,14 @@ class MyStackTest {
     myStack.push(0);
     assertFalse(myStack.isEmpty());
   }
+
   @Test
   void after_push_and_pop_stack_is_empty() {
     myStack.push(0);
     myStack.pop();
-    assertTrue(myStack.isEmpty());
+    assertThat(myStack.isEmpty()).isTrue();
+    assertThat(myStack.size()).isZero();
   }
-
 
   @Test
   void after_two_pushes_size_is_two() {

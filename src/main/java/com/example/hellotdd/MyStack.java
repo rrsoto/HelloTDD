@@ -7,6 +7,7 @@ public class MyStack {
   }
 
   private int size = 0;
+  private int pushedElement;
 
   public boolean isEmpty() {
     return 0 == size;
@@ -14,13 +15,14 @@ public class MyStack {
 
   public void push(int element) {
     size++;
+    pushedElement = element;
   }
 
   public int pop() {
     if (0 == size)
       throw new StackUnderflowException();
     size--;
-    return 99;
+    return pushedElement;
   }
 
   public int size() {

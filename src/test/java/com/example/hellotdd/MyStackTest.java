@@ -45,7 +45,7 @@ class MyStackTest {
 
   @Test
   void pop_with_empty_stack_throws_underflow(){
-    assertThatExceptionOfType(MyStack.Underflow.class).isThrownBy(myStack.pop());
+    assertThatExceptionOfType(MyStack.Underflow.class).isThrownBy(()->myStack.pop());
   }
 
 }

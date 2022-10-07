@@ -49,4 +49,10 @@ class MyStackTest {
     assertThatExceptionOfType(StackUnderflowException.class).isThrownBy(()->myStack.pop());
   }
 
+  @Test
+  void after_push_x_will_pop_x() {
+    myStack.push(99);
+    int actualPoppedElement = myStack.pop();
+    assertThat(actualPoppedElement).isEqualTo(99);
+  }
 }

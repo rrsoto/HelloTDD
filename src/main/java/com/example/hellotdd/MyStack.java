@@ -2,7 +2,7 @@ package com.example.hellotdd;
 
 public class MyStack {
 
-  public static class Underflow extends RuntimeException{
+  public static class StackUnderflowException extends RuntimeException{
 
   }
 
@@ -18,7 +18,7 @@ public class MyStack {
 
   public int pop() {
     if (0 == size)
-      throw new Underflow();
+      throw new StackUnderflowException();
     size--;
     return -1;
   }

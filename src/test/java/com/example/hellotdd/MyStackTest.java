@@ -3,6 +3,7 @@ package com.example.hellotdd;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
+import com.example.hellotdd.MyStack.StackUnderflowException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -45,7 +46,7 @@ class MyStackTest {
 
   @Test
   void pop_with_empty_stack_throws_underflow(){
-    assertThatExceptionOfType(MyStack.Underflow.class).isThrownBy(()->myStack.pop());
+    assertThatExceptionOfType(StackUnderflowException.class).isThrownBy(()->myStack.pop());
   }
 
 }

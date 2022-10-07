@@ -25,4 +25,10 @@ class MyStackTest {
     myStack.push(0);
     assertFalse(myStack.isEmpty());
   }
+  @Test
+  void after_push_and_pop_stack_is_empty() {
+    myStack.push(0);
+    myStack.pop();
+    assertTrue(myStack.isEmpty());
+  }
 }

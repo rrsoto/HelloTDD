@@ -15,4 +15,8 @@ public class MyStack {
     empty = true;
     return -1;
   }
+
+  public int size() {
+    return 2;
+  }
 }

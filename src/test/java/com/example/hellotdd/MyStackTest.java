@@ -16,12 +16,12 @@ class MyStackTest {
   }
 
   @Test
-  void test_create_stack() {
+  void after_create_stack_is_empty() {
     assertTrue(myStack.isEmpty());
   }
 
   @Test
-  void test_push() {
+  void after_push_stack_is_not_empty() {
     myStack.push(0);
     assertFalse(myStack.isEmpty());
   }

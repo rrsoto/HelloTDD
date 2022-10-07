@@ -6,6 +6,8 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import com.example.hellotdd.MyStack.StackUnderflowException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class MyStackTest {
 
@@ -49,10 +51,11 @@ class MyStackTest {
     assertThatExceptionOfType(StackUnderflowException.class).isThrownBy(()->myStack.pop());
   }
 
-  @Test
-  void after_push_x_will_pop_x() {
-    myStack.push(99);
+  @ParameterizedTest
+  @ValueSource(ints = {0, 50, 99})
+  void after_push_x_will_pop_x(int element) {
+    myStack.push(element);
     int actualPoppedElement = myStack.pop();
-    assertThat(actualPoppedElement).isEqualTo(99);
+    assertThat(actualPoppedElement).isEqualTo(element);
   }
 }

@@ -20,7 +20,7 @@ public class MyStack {
     if (0 == size)
       throw new StackUnderflowException();
     size--;
-    return -1;
+    return 99;
   }
 
   public int size() {

@@ -3,6 +3,7 @@ package com.example.hellotdd;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -31,4 +32,13 @@ class MyStackTest {
     myStack.pop();
     assertTrue(myStack.isEmpty());
   }
+
+
+  @Test
+  void after_two_pushes_size_is_two() {
+    myStack.push(0);
+    myStack.push(0);
+    assertThat(myStack.size()).isEqualTo(2);
+  }
+
 }

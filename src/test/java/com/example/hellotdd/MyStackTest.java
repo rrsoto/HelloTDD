@@ -4,6 +4,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 import com.example.hellotdd.MyStack.StackUnderflowException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import org.jeasy.random.EasyRandom;
+import org.jeasy.random.EasyRandomParameters;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -65,5 +73,21 @@ class MyStackTest {
     myStack.push(88);
     assertThat(myStack.pop()).isEqualTo(88);
     assertThat(myStack.pop()).isEqualTo(99);
+  }
+
+  @Test
+  void after_push_x_elements_will_pop_inverted_elements() {
+    EasyRandom easyRandom = new EasyRandom();
+    final var randomElements = easyRandom.objects(Integer.class, 25).collect(Collectors.toList());
+
+    randomElements.forEach( element -> myStack.push(element) );
+
+    List<Integer> poppedElements = new ArrayList<>();
+    for (int i = 0 ; i < randomElements.size(); i++) {
+      poppedElements.add(myStack.pop());
+    }
+
+    Collections.reverse(randomElements);
+    assertThat(poppedElements).isEqualTo(randomElements);
   }
 }

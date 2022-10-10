@@ -14,13 +14,13 @@
 
 ## Ciclo de TDD
 
+Haz que falle. Haz que pase. Refactoriza.
+
 ![tddredgreenrefactor.webp](doc/tdd-red-green-refactor.webp?t=1665124419749)
 
 ## Pautas
 
 * Escribe la prueba que te obliga a escribir el código que ya sabes que quieres escribir.
-* Haz que falle. Haz que pase. Refactoriza.
+* Escribe la prueba mas simple y mas específica que va a fallar.
 * No vayas a por el oro.
-* Escribe la prueba mas simple, mas específica y mas degradada que va a fallar.
 * Generaliza cuando sea posible.
-* Cuando el código dé la sensación de estar mal, arreglalo.
